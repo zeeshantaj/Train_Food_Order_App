@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "359974772338",
+    "project_id": "trainfoodorder-73f8f",
+    "storage_bucket": "trainfoodorder-73f8f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:359974772338:android:835e1957f2ad67dd03eceb",
+        "android_client_info": {
+          "package_name": "com.example.train_food_order_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "359974772338-npd1o5hdjaulcrrrnkhti1oirat8c7f2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPgdKrI8GnZBn35uCbctez2oQ_LV99nFw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "359974772338-npd1o5hdjaulcrrrnkhti1oirat8c7f2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightYellow"
+    tools:context=".FoodDetailsActivity">
+
+
+    <ImageView
+        android:id="@+id/foodImageDetail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/image150"
+        android:background="@color/lightYellow"
+        android:src="@drawable/done"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nameDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin5"
+        android:maxLines="2"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSize18"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foodImageDetail" />
+
+    <TextView
+        android:id="@+id/descriptionDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin5"
+        android:maxLines="5"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSize16"
+        app:layout_constraintStart_toStartOf="@+id/nameDetails"
+        app:layout_constraintTop_toBottomOf="@+id/nameDetails" />
+
+    <TextView
+        android:id="@+id/priceDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin5"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="@color/red"
+        android:textSize="@dimen/textSize16"
+        app:layout_constraintStart_toStartOf="@+id/descriptionDetails"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionDetails" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin20"
+        android:backgroundTint="@color/yellow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/priceDetails">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Add ColdDrink"
+            android:textSize="@dimen/textSize24"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/arrowImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/arrow_down"
+            android:layout_gravity="end"
+            android:layout_marginEnd="15dp"/>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/expandableCons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/yellow"
+            android:visibility="gone"
+            android:paddingBottom="@dimen/margin5"
+            android:layout_marginTop="@dimen/margin50"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Coke 250ml"
+                android:textSize="@dimen/textSize24"
+                android:layout_marginStart="@dimen/margin10"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/cokePrice"
+                app:layout_constraintStart_toEndOf="@+id/cokePrice"
+                app:layout_constraintTop_toTopOf="@+id/cokePrice" />
+
+            <TextView
+                android:id="@+id/cokePrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="$ 2.22"
+                android:textColor="@color/red"
+                android:layout_marginStart="@dimen/margin10"
+                android:layout_marginTop="@dimen/margin10"
+                android:textSize="@dimen/textSize24"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/cokeQtr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin20"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:layout_marginTop="@dimen/margin10"
+                android:text="0"
+                android:textSize="@dimen/textSize24"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/cokeAdd"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/cokeAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin20"
+                android:layout_marginTop="@dimen/margin10"
+                android:src="@drawable/add"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/cokeMinus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin20"
+                android:layout_marginTop="@dimen/margin10"
+                android:src="@drawable/minus"
+                app:layout_constraintEnd_toStartOf="@+id/cokeQtr"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Sprite 250ml"
+                android:textSize="@dimen/textSize24"
+                android:layout_marginStart="@dimen/margin10"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/spritePrice"
+                app:layout_constraintStart_toEndOf="@+id/spritePrice"
+                app:layout_constraintTop_toTopOf="@+id/spritePrice" />
+
+            <TextView
+                android:id="@+id/spritePrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="$ 2.22"
+                android:textColor="@color/red"
+                android:textSize="@dimen/textSize24"
+                android:layout_marginTop="@dimen/margin10"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/cokePrice"
+                app:layout_constraintTop_toBottomOf="@+id/cokePrice" />
+
+            <TextView
+                android:id="@+id/sprintQtr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="0"
+                android:textSize="@dimen/textSize24"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/spriteAdd"
+                app:layout_constraintStart_toEndOf="@+id/spritMinus"
+                app:layout_constraintTop_toBottomOf="@+id/cokeQtr" />
+
+            <ImageView
+                android:id="@+id/spriteAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:src="@drawable/add"
+                app:layout_constraintEnd_toEndOf="@+id/cokeAdd"
+                app:layout_constraintTop_toBottomOf="@+id/cokeAdd" />
+
+            <ImageView
+                android:id="@+id/spritMinus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:src="@drawable/minus"
+                app:layout_constraintEnd_toEndOf="@+id/cokeMinus"
+                app:layout_constraintStart_toStartOf="@+id/cokeMinus"
+                app:layout_constraintTop_toBottomOf="@+id/cokeMinus" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Fanta 250ml"
+                android:textSize="@dimen/textSize24"
+                android:layout_marginStart="@dimen/margin10"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/fantaPrice"
+                app:layout_constraintStart_toEndOf="@+id/fantaPrice"
+                app:layout_constraintTop_toTopOf="@+id/fantaPrice" />
+
+            <TextView
+                android:id="@+id/fantaPrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="$ 2.22"
+                android:textColor="@color/red"
+                android:textSize="@dimen/textSize24"
+                android:layout_marginTop="@dimen/margin10"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/spritePrice"
+                app:layout_constraintTop_toBottomOf="@+id/spritePrice" />
+
+            <TextView
+                android:id="@+id/fantatQtr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="0"
+                android:textSize="@dimen/textSize24"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/fantaAdd"
+                app:layout_constraintStart_toEndOf="@+id/fantaMinus"
+                app:layout_constraintTop_toBottomOf="@+id/sprintQtr" />
+
+            <ImageView
+                android:id="@+id/fantaAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:src="@drawable/add"
+                app:layout_constraintEnd_toEndOf="@+id/spriteAdd"
+                app:layout_constraintTop_toBottomOf="@+id/spriteAdd" />
+
+            <ImageView
+                android:id="@+id/fantaMinus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:src="@drawable/minus"
+                app:layout_constraintEnd_toEndOf="@+id/spritMinus"
+                app:layout_constraintTop_toBottomOf="@+id/spritMinus" />
+
+            <TextView
+                android:id="@+id/textView54"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Water 250ml"
+                android:textSize="@dimen/textSize24"
+                android:layout_marginStart="@dimen/margin10"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/waterPrice"
+                app:layout_constraintTop_toTopOf="@+id/waterPrice" />
+
+            <TextView
+                android:id="@+id/waterPrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="$ 1.22"
+                android:layout_marginTop="@dimen/margin10"
+                android:textColor="@color/red"
+                android:textSize="@dimen/textSize24"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/fantaPrice"
+                app:layout_constraintTop_toBottomOf="@+id/fantaPrice" />
+
+            <TextView
+                android:id="@+id/waterQtr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="0"
+                android:textSize="@dimen/textSize24"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/margin10"
+                app:layout_constraintEnd_toStartOf="@+id/waterAdd"
+                app:layout_constraintStart_toEndOf="@+id/waterMinus"
+                app:layout_constraintTop_toBottomOf="@+id/fantatQtr" />
+
+            <ImageView
+                android:id="@+id/waterAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/add"
+                android:layout_marginTop="@dimen/margin10"
+                app:layout_constraintEnd_toEndOf="@+id/fantaAdd"
+                app:layout_constraintTop_toBottomOf="@+id/fantaAdd" />
+
+            <ImageView
+                android:id="@+id/waterMinus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/minus"
+                android:layout_marginTop="@dimen/margin10"
+                app:layout_constraintEnd_toEndOf="@+id/fantaMinus"
+                app:layout_constraintTop_toBottomOf="@+id/fantaMinus" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+    <TextView
+        android:id="@+id/Quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin20"
+        android:layout_marginTop="@dimen/margin10"
+        android:text="@string/qtr"
+        android:textSize="@dimen/textSize24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <TextView
+        android:id="@+id/qtr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:layout_marginTop="@dimen/margin5"
+        android:layout_marginEnd="@dimen/margin20"
+        android:textSize="@dimen/textSize24"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/add"
+        app:layout_constraintTop_toBottomOf="@+id/Quantity" />
+
+    <ImageView
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin20"
+        android:layout_marginTop="@dimen/margin5"
+        android:src="@drawable/add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Quantity" />
+
+    <ImageView
+        android:id="@+id/minus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/minus"
+        android:layout_marginTop="@dimen/margin5"
+        android:layout_marginEnd="@dimen/margin20"
+        app:layout_constraintEnd_toStartOf="@+id/qtr"
+        app:layout_constraintTop_toBottomOf="@+id/Quantity" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total Price (tax included)"
+        android:textAlignment="textEnd"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/margin20"
+        android:textSize="@dimen/textSize24"
+        android:layout_marginEnd="@dimen/margin20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/minus" />
+
+    <TextView
+        android:id="@+id/totalPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin20"
+        android:textAlignment="textEnd"
+        android:textColor="@color/red"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:textSize="@dimen/textSize24"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+    <Button
+        android:id="@+id/orderBtn"
+        android:layout_width="@dimen/image150"
+        android:layout_height="wrap_content"
+        android:background="@color/lightPink"
+        android:text="@string/orderText"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/priceDetails"
+        app:layout_constraintStart_toStartOf="@+id/priceDetails"
+        app:layout_constraintTop_toBottomOf="@+id/totalPrice" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
